@@ -20,7 +20,7 @@ export default function BackgroundMusic({ forcePause }: BackgroundMusicProps) {
     audio.volume = 0.4; // 40% volume
     audioRef.current = audio;
 
-    const interactionEvents = ["click", "touchstart", "keydown", "pointerdown"];
+    const interactionEvents = ["click", "touchstart", "keydown", "pointerdown", "scroll", "wheel", "touchmove"];
 
     const handleFirstInteraction = () => {
       if (!userInteractedRef.current) {
