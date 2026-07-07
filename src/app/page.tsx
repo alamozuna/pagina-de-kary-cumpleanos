@@ -10,6 +10,7 @@ import SurpriseButton from "../components/SurpriseButton";
 import CustomCursor from "../components/CustomCursor";
 import ConfettiEffect from "../components/ConfettiEffect";
 import SectionDivider from "../components/SectionDivider";
+import BackgroundMusic from "../components/BackgroundMusic";
 import manifest from "../lib/fotos.json";
 import { Sparkles, Heart } from "lucide-react";
 
@@ -33,6 +34,7 @@ export default function Home() {
       <CustomCursor />
       <ConfettiEffect />
       <SurpriseButton />
+      <BackgroundMusic forcePause={lightboxOpen && lightboxIsVideo} />
 
       {/* Main Sections */}
       <Hero />

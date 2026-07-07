@@ -41,8 +41,9 @@ export default function PolaroidCard({ src, onClick, index }: PolaroidCardProps)
     const filenameWithExt = parts[parts.length - 1];
     const filename = filenameWithExt.split(".")[0];
     
-    // Clean up filename a bit if it contains WhatsApp
-    if (filename.toLowerCase().includes("whatsapp")) {
+    const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    // Clean up filename a bit if it contains WhatsApp or looks like a UUID
+    if (filename.toLowerCase().includes("whatsapp") || uuidRegex.test(filename)) {
       return "Momento especial ✨";
     }
     return filename || "Karyleydi Ortiz";
