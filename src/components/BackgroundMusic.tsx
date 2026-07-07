@@ -9,7 +9,7 @@ interface BackgroundMusicProps {
 }
 
 export default function BackgroundMusic({ forcePause }: BackgroundMusicProps) {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const userInteractedRef = useRef(false);
 
@@ -20,7 +20,7 @@ export default function BackgroundMusic({ forcePause }: BackgroundMusicProps) {
     audio.volume = 0.4; // 40% volume
     audioRef.current = audio;
 
-    const interactionEvents = ["click", "touchstart", "keydown", "pointerdown", "scroll", "wheel", "touchmove"];
+    const interactionEvents = ["scroll", "wheel", "touchmove"];
 
     const handleFirstInteraction = () => {
       if (!userInteractedRef.current) {
