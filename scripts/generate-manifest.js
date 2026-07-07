@@ -78,12 +78,24 @@ function run() {
     const images = [];
     const videos = [];
 
+    const mp4Bases = new Set(
+      files
+        .filter(f => path.extname(f).toLowerCase() === '.mp4')
+        .map(f => path.basename(f, path.extname(f)).toLowerCase())
+    );
+
     for (const filePath of files) {
       const filename = path.basename(filePath);
       if (filename.startsWith('._') || filename === '9C2FECF7-C623-4BAF-9C9B-013A9510C229.MOV') {
         continue;
       }
       const ext = path.extname(filePath).toLowerCase();
+      
+      // Skip .mov if a converted .mp4 exists
+      if (ext === '.mov' && mp4Bases.has(path.basename(filePath, path.extname(filePath)).toLowerCase())) {
+        continue;
+      }
+
       const relativePath = '/' + path.relative(path.join(__dirname, '..', 'public'), filePath).replace(/\\/g, '/');
 
       if (IMAGE_EXTENSIONS.has(ext)) {
