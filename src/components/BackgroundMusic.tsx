@@ -29,7 +29,6 @@ export default function BackgroundMusic({ forcePause }: BackgroundMusicProps) {
           setIsPlaying(true);
         }).catch((e) => {
           console.log("Autoplay blocked:", e);
-          setIsPlaying(false);
         });
         interactionEvents.forEach(event => 
           window.removeEventListener(event, handleFirstInteraction)
@@ -74,13 +73,13 @@ export default function BackgroundMusic({ forcePause }: BackgroundMusicProps) {
 
     userInteractedRef.current = true;
 
-    if (isPlaying) {
-      audio.pause();
-      setIsPlaying(false);
-    } else {
+    if (audio.paused) {
       audio.play().then(() => {
         setIsPlaying(true);
       }).catch((e) => console.log("Playback failed:", e));
+    } else {
+      audio.pause();
+      setIsPlaying(false);
     }
   };
 
