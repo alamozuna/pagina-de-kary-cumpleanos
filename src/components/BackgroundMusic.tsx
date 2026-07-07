@@ -10,23 +10,25 @@ interface BackgroundMusicProps {
 
 export default function BackgroundMusic({ forcePause }: BackgroundMusicProps) {
   const [isPlaying, setIsPlaying] = useState(true);
-  const [userInteracted, setUserInteracted] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const userInteractedRef = useRef(false);
 
-  // Initialize Audio
+  // Initialize Audio once on mount
   useEffect(() => {
-    audioRef.current = new Audio("/favorite-girl.mp3");
-    audioRef.current.loop = true;
-    audioRef.current.volume = 0.4; // 40% volume
+    const audio = new Audio("/favorite-girl.mp3");
+    audio.loop = true;
+    audio.volume = 0.4; // 40% volume
+    audioRef.current = audio;
 
-    // Attempt autoplay on first user click on window
     const handleFirstInteraction = () => {
-      if (!userInteracted && audioRef.current) {
-        audioRef.current.play().then(() => {
+      if (!userInteractedRef.current) {
+        userInteractedRef.current = true;
+        audio.play().then(() => {
           setIsPlaying(true);
-          setUserInteracted(true);
-        }).catch((e) => console.log("Autoplay blocked:", e));
-        
+        }).catch((e) => {
+          console.log("Autoplay blocked:", e);
+          setIsPlaying(false);
+        });
         window.removeEventListener("click", handleFirstInteraction);
       }
     };
@@ -35,21 +37,22 @@ export default function BackgroundMusic({ forcePause }: BackgroundMusicProps) {
 
     return () => {
       window.removeEventListener("click", handleFirstInteraction);
-      if (audioRef.current) {
-        audioRef.current.pause();
-      }
+      audio.pause();
     };
-  }, [userInteracted]);
+  }, []);
 
   // Handle force pause (when video plays in lightbox)
   useEffect(() => {
-    if (audioRef.current) {
-      if (forcePause) {
-        audioRef.current.pause();
-        setIsPlaying(false);
-      } else if (userInteracted && !isPlaying) {
-        // Resume if user has already allowed playing
-        audioRef.current.play().then(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (forcePause) {
+      audio.pause();
+      setIsPlaying(false);
+    } else {
+      // Resume if user has already allowed playing previously
+      if (userInteractedRef.current) {
+        audio.play().then(() => {
           setIsPlaying(true);
         }).catch(() => {});
       }
@@ -58,15 +61,17 @@ export default function BackgroundMusic({ forcePause }: BackgroundMusicProps) {
 
   const togglePlay = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (!audioRef.current) return;
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    userInteractedRef.current = true;
 
     if (isPlaying) {
-      audioRef.current.pause();
+      audio.pause();
       setIsPlaying(false);
     } else {
-      audioRef.current.play().then(() => {
+      audio.play().then(() => {
         setIsPlaying(true);
-        setUserInteracted(true);
       }).catch((e) => console.log("Playback failed:", e));
     }
   };
