@@ -24,6 +24,20 @@ function getSlug(folderName) {
     .replace(/(^-|-$)/g, '');
 }
 
+function getAllFiles(dirPath, arrayOfFiles = []) {
+  const files = fs.readdirSync(dirPath);
+
+  files.forEach(function(file) {
+    if (fs.statSync(dirPath + "/" + file).isDirectory()) {
+      arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles);
+    } else {
+      arrayOfFiles.push(path.join(dirPath, "/", file));
+    }
+  });
+
+  return arrayOfFiles;
+}
+
 function run() {
   if (!fs.existsSync(FOTOS_DIR)) {
     console.error(`Directory not found: ${FOTOS_DIR}`);
@@ -59,14 +73,18 @@ function run() {
 
   for (const folder of folders) {
     const folderPath = path.join(FOTOS_DIR, folder);
-    const files = fs.readdirSync(folderPath);
+    const files = getAllFiles(folderPath);
 
     const images = [];
     const videos = [];
 
-    for (const file of files) {
-      const ext = path.extname(file).toLowerCase();
-      const relativePath = `/fotos/${folder}/${file}`;
+    for (const filePath of files) {
+      const filename = path.basename(filePath);
+      if (filename.startsWith('._') || filename === '9C2FECF7-C623-4BAF-9C9B-013A9510C229.MOV') {
+        continue;
+      }
+      const ext = path.extname(filePath).toLowerCase();
+      const relativePath = '/' + path.relative(path.join(__dirname, '..', 'public'), filePath).replace(/\\/g, '/');
 
       if (IMAGE_EXTENSIONS.has(ext)) {
         images.push(relativePath);

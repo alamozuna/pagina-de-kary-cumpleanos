@@ -67,7 +67,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 bg-soft-beige px-5 py-3 rounded-2xl border border-lavender-light/20 text-text-medium text-sm md:text-base shadow-sm mb-10"
         >
           <Calendar size={16} className="text-lavender" />
-          <span>7 de Julio, 2026</span>
+          <span>9 de Julio, 2026</span>
         </motion.div>
 
         {/* Call to action (button architecture from alam_uxpage_skill) */}

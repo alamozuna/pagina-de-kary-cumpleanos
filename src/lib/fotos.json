@@ -16,7 +16,7 @@
       "/fotos/Fotos con Asleyri/A9038A87-403C-4E24-A681-7390CBFB2A22.JPG.jpeg"
     ],
     "videos": [
-      "/fotos/Fotos con Asleyri/9C2FECF7-C623-4BAF-9C9B-013A9510C229.MOV"
+      "/fotos/Fotos con Asleyri/Video de Asleyri/IMG_4081.MOV"
     ]
   },
   {
@@ -50,7 +50,9 @@
       "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.19 AM (2).jpeg",
       "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.19 AM.jpeg"
     ],
-    "videos": []
+    "videos": [
+      "/fotos/Fotos con Carina y Daniel/Video Carina/WhatsApp Video 2026-07-06 at 11.05.16 AM.mp4"
+    ]
   },
   {
     "id": "gente-que-te-quiere",
@@ -83,7 +85,9 @@
       "/fotos/Fotos con Leslie/3WhatsApp Image 2026-07-06 at 4.41.30 PM.jpeg",
       "/fotos/Fotos con Leslie/WhatsApp Image 2026-07-06 at 4.41.30 PM.jpeg"
     ],
-    "videos": []
+    "videos": [
+      "/fotos/Fotos con Leslie/Video de Leslie/WhatsApp Video 2026-07-07 at 6.17.03 PM.mp4"
+    ]
   },
   {
     "id": "ronel",
