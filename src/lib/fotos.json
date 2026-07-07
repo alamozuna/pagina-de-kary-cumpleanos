@@ -1,63 +1,5 @@
 [
   {
-    "id": "alam",
-    "title": "Alam",
-    "folder": "Fotos con Alam",
-    "images": [
-      "/fotos/Fotos con Alam/WhatsApp Image 2026-07-03 at 12.26.39 PM.jpeg"
-    ],
-    "videos": []
-  },
-  {
-    "id": "asleyri",
-    "title": "Asleyri",
-    "folder": "Fotos con Asleyri",
-    "images": [
-      "/fotos/Fotos con Asleyri/1829590F-4EDE-495B-8EBE-A2389BC505ED.jpg",
-      "/fotos/Fotos con Asleyri/3D4E2F62-5BC1-47E0-945F-087384613BC8.jpg",
-      "/fotos/Fotos con Asleyri/A9038A87-403C-4E24-A681-7390CBFB2A22.JPG.jpeg",
-      "/fotos/Fotos con Asleyri/F77EB02A-BE21-4ACE-B873-D41E6C898F5F.jpg"
-    ],
-    "videos": [
-      "/fotos/Fotos con Asleyri/Video de Asleyri/IMG_4081.mp4"
-    ]
-  },
-  {
-    "id": "bryan",
-    "title": "Bryan",
-    "folder": "Fotos con Bryan",
-    "images": [
-      "/fotos/Fotos con Bryan/WhatsApp Image 2026-07-06 at 2.51.17 PM.jpeg"
-    ],
-    "videos": []
-  },
-  {
-    "id": "carina-y-daniel",
-    "title": "Carina y Daniel",
-    "folder": "Fotos con Carina y Daniel",
-    "images": [
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.16 AM (1).jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.16 AM (2).jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.16 AM (3).jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.16 AM.jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.17 AM (1).jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.17 AM (2).jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.17 AM (3).jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.17 AM.jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.18 AM (1).jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.18 AM (2).jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.18 AM (3).jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.18 AM (4).jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.18 AM.jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.19 AM (1).jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.19 AM (2).jpeg",
-      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.19 AM.jpeg"
-    ],
-    "videos": [
-      "/fotos/Fotos con Carina y Daniel/Video Carina/WhatsApp Video 2026-07-06 at 11.05.16 AM.mp4"
-    ]
-  },
-  {
     "id": "gente-que-te-quiere",
     "title": "Gente Que te Quiere",
     "folder": "Fotos con Gente Que te Quiere",
@@ -91,6 +33,64 @@
     "videos": [
       "/fotos/Fotos con Leslie/Video de Leslie/WhatsApp Video 2026-07-07 at 6.17.03 PM.mp4"
     ]
+  },
+  {
+    "id": "asleyri",
+    "title": "Asleyri",
+    "folder": "Fotos con Asleyri",
+    "images": [
+      "/fotos/Fotos con Asleyri/1829590F-4EDE-495B-8EBE-A2389BC505ED.jpg",
+      "/fotos/Fotos con Asleyri/3D4E2F62-5BC1-47E0-945F-087384613BC8.jpg",
+      "/fotos/Fotos con Asleyri/A9038A87-403C-4E24-A681-7390CBFB2A22.JPG.jpeg",
+      "/fotos/Fotos con Asleyri/F77EB02A-BE21-4ACE-B873-D41E6C898F5F.jpg"
+    ],
+    "videos": [
+      "/fotos/Fotos con Asleyri/Video de Asleyri/IMG_4081.mp4"
+    ]
+  },
+  {
+    "id": "carina-y-daniel",
+    "title": "Carina y Daniel",
+    "folder": "Fotos con Carina y Daniel",
+    "images": [
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.16 AM (1).jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.16 AM (2).jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.16 AM (3).jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.16 AM.jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.17 AM (1).jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.17 AM (2).jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.17 AM (3).jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.17 AM.jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.18 AM (1).jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.18 AM (2).jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.18 AM (3).jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.18 AM (4).jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.18 AM.jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.19 AM (1).jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.19 AM (2).jpeg",
+      "/fotos/Fotos con Carina y Daniel/WhatsApp Image 2026-07-06 at 11.05.19 AM.jpeg"
+    ],
+    "videos": [
+      "/fotos/Fotos con Carina y Daniel/Video Carina/WhatsApp Video 2026-07-06 at 11.05.16 AM.mp4"
+    ]
+  },
+  {
+    "id": "bryan",
+    "title": "Bryan",
+    "folder": "Fotos con Bryan",
+    "images": [
+      "/fotos/Fotos con Bryan/WhatsApp Image 2026-07-06 at 2.51.17 PM.jpeg"
+    ],
+    "videos": []
+  },
+  {
+    "id": "alam",
+    "title": "Alam",
+    "folder": "Fotos con Alam",
+    "images": [
+      "/fotos/Fotos con Alam/WhatsApp Image 2026-07-03 at 12.26.39 PM.jpeg"
+    ],
+    "videos": []
   },
   {
     "id": "ronel",

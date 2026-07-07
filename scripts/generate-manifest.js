@@ -44,14 +44,14 @@ function run() {
     process.exit(1);
   }
 
-  // Predefined order as requested in prompt:
+  // Predefined order updated by user:
   const order = [
-    'Fotos con Alam',
-    'Fotos con Asleyri',
-    'Fotos con Bryan',
-    'Fotos con Carina y Daniel',
     'Fotos con Gente Que te Quiere',
     'Fotos con Leslie',
+    'Fotos con Asleyri',
+    'Fotos con Carina y Daniel',
+    'Fotos con Bryan',
+    'Fotos con Alam',
     'Fotos con Ronel',
     'Fotos de Kary en el Espectro'
   ];
