@@ -20,6 +20,8 @@ export default function BackgroundMusic({ forcePause }: BackgroundMusicProps) {
     audio.volume = 0.4; // 40% volume
     audioRef.current = audio;
 
+    const interactionEvents = ["click", "touchstart", "keydown", "pointerdown"];
+
     const handleFirstInteraction = () => {
       if (!userInteractedRef.current) {
         userInteractedRef.current = true;
@@ -29,14 +31,20 @@ export default function BackgroundMusic({ forcePause }: BackgroundMusicProps) {
           console.log("Autoplay blocked:", e);
           setIsPlaying(false);
         });
-        window.removeEventListener("click", handleFirstInteraction);
+        interactionEvents.forEach(event => 
+          window.removeEventListener(event, handleFirstInteraction)
+        );
       }
     };
 
-    window.addEventListener("click", handleFirstInteraction);
+    interactionEvents.forEach(event => 
+      window.addEventListener(event, handleFirstInteraction)
+    );
 
     return () => {
-      window.removeEventListener("click", handleFirstInteraction);
+      interactionEvents.forEach(event => 
+        window.removeEventListener(event, handleFirstInteraction)
+      );
       audio.pause();
     };
   }, []);
