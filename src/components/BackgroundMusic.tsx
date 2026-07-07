@@ -9,13 +9,13 @@ interface BackgroundMusicProps {
 }
 
 export default function BackgroundMusic({ forcePause }: BackgroundMusicProps) {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [userInteracted, setUserInteracted] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Initialize Audio
   useEffect(() => {
-    audioRef.current = new Audio("/Favorite Girl.mp3");
+    audioRef.current = new Audio("/favorite-girl.mp3");
     audioRef.current.loop = true;
     audioRef.current.volume = 0.4; // 40% volume
 
