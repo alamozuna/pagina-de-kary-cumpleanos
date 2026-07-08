@@ -5,7 +5,7 @@ const FOTOS_DIR = path.join(__dirname, '..', 'public', 'fotos');
 const OUTPUT_FILE = path.join(__dirname, '..', 'src', 'lib', 'fotos.json');
 
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif']);
-const VIDEO_EXTENSIONS = new Set(['.mp4', '.webm', '.mov']);
+const VIDEO_EXTENSIONS = new Set(['.mp4', '.webm', '.mov', '.ogg', '.mp3', '.wav', '.m4a']);
 
 function cleanTitle(folderName) {
   // e.g. "Fotos con Alam" -> "Alam"
@@ -50,6 +50,11 @@ function run() {
     'Fotos con Leslie',
     'Fotos con Asleyri',
     'Fotos con Carina y Daniel',
+    'Fotos con Laura',
+    'Video con Angelica',
+    'Video de Daniel',
+    'Video de Primos',
+    'Audio de Riquelme',
     'Fotos con Bryan',
     'Fotos con Alam',
     'Fotos con Ronel',

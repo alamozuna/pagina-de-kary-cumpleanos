@@ -17,7 +17,10 @@
       "/fotos/Fotos con Gente Que te Quiere/WhatsApp Image 2026-07-03 at 12.29.34 PM.jpeg",
       "/fotos/Fotos con Gente Que te Quiere/WhatsApp Image 2026-07-06 at 11.37.15 AM.jpeg",
       "/fotos/Fotos con Gente Que te Quiere/WhatsApp Image 2026-07-06 at 4.41.29 PM.jpeg",
-      "/fotos/Fotos con Gente Que te Quiere/WhatsApp Image 2026-07-07 at 7.47.58 AM.jpeg"
+      "/fotos/Fotos con Gente Que te Quiere/WhatsApp Image 2026-07-07 at 7.47.58 AM.jpeg",
+      "/fotos/Fotos con Gente Que te Quiere/WhatsApp Image 2026-07-08 at 6.02.01 AM.jpeg",
+      "/fotos/Fotos con Gente Que te Quiere/WhatsApp Image 2026-07-08 at 6.05.00 AM.jpeg",
+      "/fotos/Fotos con Gente Que te Quiere/WhatsApp Image 2026-07-08 at 6.31.43 AM.jpeg"
     ],
     "videos": []
   },
@@ -75,6 +78,54 @@
     ]
   },
   {
+    "id": "laura",
+    "title": "Laura",
+    "folder": "Fotos con Laura",
+    "images": [
+      "/fotos/Fotos con Laura/WhatsApp Image 2026-07-08 at 6.27.56 AM.jpeg",
+      "/fotos/Fotos con Laura/WhatsApp Image 2026-07-08 at 6.31.30 AM.jpeg"
+    ],
+    "videos": [
+      "/fotos/Fotos con Laura/WhatsApp Video 2026-07-08 at 6.28.40 AM.mp4"
+    ]
+  },
+  {
+    "id": "video-con-angelica",
+    "title": "Video con Angelica",
+    "folder": "Video con Angelica",
+    "images": [],
+    "videos": [
+      "/fotos/Video con Angelica/WhatsApp Video 2026-07-08 at 1.28.54 PM.mp4"
+    ]
+  },
+  {
+    "id": "video-de-daniel",
+    "title": "Video de Daniel",
+    "folder": "Video de Daniel",
+    "images": [],
+    "videos": [
+      "/fotos/Video de Daniel/WhatsApp Video 2026-07-08 at 5.48.48 AM.mp4"
+    ]
+  },
+  {
+    "id": "video-de-primos",
+    "title": "Video de Primos",
+    "folder": "Video de Primos",
+    "images": [],
+    "videos": [
+      "/fotos/Video de Primos/WhatsApp Video 2026-07-08 at 1.28.29 PM.mp4"
+    ]
+  },
+  {
+    "id": "audio-de-riquelme",
+    "title": "Audio de Riquelme",
+    "folder": "Audio de Riquelme",
+    "images": [],
+    "videos": [
+      "/fotos/Audio de Riquelme/WhatsApp Audio 2026-07-08 at 5.49.12 AM.ogg"
+    ]
+  },
+  {
     "id": "bryan",
     "title": "Bryan",
     "folder": "Fotos con Bryan",
@@ -88,6 +139,7 @@
     "title": "Alam",
     "folder": "Fotos con Alam",
     "images": [
+      "/fotos/Fotos con Alam/WhatsApp Image 2026-07-03 at 11.34.55 AM.jpeg",
       "/fotos/Fotos con Alam/WhatsApp Image 2026-07-03 at 12.26.39 PM.jpeg"
     ],
     "videos": []
@@ -109,8 +161,13 @@
       "/fotos/Fotos de Kary en el Espectro/2WhatsApp Image 2026-07-06 at 11.37.16 AM.jpeg",
       "/fotos/Fotos de Kary en el Espectro/3WhatsApp Image 2026-07-06 at 11.37.16 AM.jpeg",
       "/fotos/Fotos de Kary en el Espectro/4WhatsApp Image 2026-07-06 at 11.37.16 AM.jpeg",
-      "/fotos/Fotos de Kary en el Espectro/WhatsApp Image 2026-07-06 at 11.37.15 AM.jpeg"
+      "/fotos/Fotos de Kary en el Espectro/WhatsApp Image 2026-07-06 at 11.37.15 AM.jpeg",
+      "/fotos/Fotos de Kary en el Espectro/WhatsApp Image 2026-07-08 at 6.04.31 AM.jpeg"
     ],
-    "videos": []
+    "videos": [
+      "/fotos/Fotos de Kary en el Espectro/WhatsApp Video 2026-07-08 at 6.03.42 AM.mp4",
+      "/fotos/Fotos de Kary en el Espectro/WhatsApp Video 2026-07-08 at 6.06.02 AM.mp4",
+      "/fotos/Fotos de Kary en el Espectro/WhatsApp Video 2026-07-08 at 6.12.37 AM.mp4"
+    ]
   }
 ]

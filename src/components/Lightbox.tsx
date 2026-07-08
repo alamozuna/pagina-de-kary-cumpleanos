@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, ChevronRight, Film } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Film, Mic } from "lucide-react";
 import Image from "next/image";
 
 interface LightboxProps {
@@ -45,6 +45,13 @@ export default function Lightbox({
   };
 
   const currentItem = items[currentIndex];
+  
+  const isAudioItem = currentItem && (
+    currentItem.toLowerCase().endsWith(".ogg") ||
+    currentItem.toLowerCase().endsWith(".mp3") ||
+    currentItem.toLowerCase().endsWith(".wav") ||
+    currentItem.toLowerCase().endsWith(".m4a")
+  );
 
   return (
     <AnimatePresence>
@@ -90,20 +97,43 @@ export default function Lightbox({
             onClick={(e: React.MouseEvent) => e.stopPropagation()}
           >
             {isVideo ? (
-              <div className="w-full h-full max-w-lg aspect-[9/16] bg-black rounded-lg overflow-hidden relative border border-white/10 shadow-2xl">
-                {/* Special video indicator */}
-                <div className="absolute top-3 left-3 z-10 bg-amber-400 text-amber-950 text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1 shadow">
-                  <Film size={12} />
-                  Mensaje Especial
+              isAudioItem ? (
+                <div className="w-full max-w-md bg-zinc-900 border border-white/10 rounded-2xl p-8 flex flex-col items-center gap-6 shadow-2xl relative">
+                  {/* Decorative background glow */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-lavender/10 to-amber-400/5 rounded-2xl blur-xl pointer-events-none" />
+                  
+                  <div className="w-20 h-20 rounded-full bg-lavender/20 flex items-center justify-center border border-lavender/30">
+                    <Mic className="text-lavender animate-pulse" size={36} />
+                  </div>
+
+                  <div className="text-center">
+                    <h3 className="text-white font-semibold text-lg">Mensaje de Voz</h3>
+                    <p className="text-zinc-400 text-xs mt-1">Escucha la felicitación especial de cumpleaños</p>
+                  </div>
+
+                  <audio
+                    src={currentItem}
+                    controls
+                    autoPlay
+                    className="w-full accent-lavender"
+                  />
                 </div>
-                <video
-                  src={currentItem}
-                  controls
-                  autoPlay
-                  playsInline
-                  className="w-full h-full object-contain"
-                />
-              </div>
+              ) : (
+                <div className="w-full h-full max-w-lg aspect-[9/16] bg-black rounded-lg overflow-hidden relative border border-white/10 shadow-2xl">
+                  {/* Special video indicator */}
+                  <div className="absolute top-3 left-3 z-10 bg-amber-400 text-amber-950 text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1 shadow">
+                    <Film size={12} />
+                    Mensaje Especial
+                  </div>
+                  <video
+                    src={currentItem}
+                    controls
+                    autoPlay
+                    playsInline
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              )
             ) : (
               <div className="relative w-full h-full">
                 <Image
